@@ -1,0 +1,53 @@
+@import url(main.css);
+@import url(modal.css);
+
+/* header */
+@media(max-width : 600px) {
+    .header {
+        flex-direction: column;
+        height: 20vh;
+    }
+
+    .logo {
+        height: 33%;
+    }
+
+    .logo-img {
+        width: 50%;
+        height: 100%;
+    }
+
+    .search {
+        height: 33%;
+    }
+
+    .gallery-button {
+        height: 33%;
+    }
+}
+
+/* edit modal */
+@media(max-width : 950px) {
+    .modal-container {
+        top: 5%;
+        transform: translate(-55%, -5%);
+        grid-template-columns: 620px;
+        grid-template-rows: 600px 200px;
+    }
+
+    .edit-container {
+        width: 620px;
+        height: 250px;
+        grid-template-columns: 25% 25% 25% 25%;
+        grid-template-rows: 33.3% 33.3% 33.3%;
+    }
+
+    .line {
+        grid-column: 1/2;
+    }
+
+    .close-modal {
+        grid-column: 4/5;
+    }
+
+}

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/mq.css">
+    <title>meme generator</title>
+</head>
+
+<body onload="renderGallery(true)">
+    <header class="header">
+        <div class="logo flex"><img src="images/LOGO.png" class="logo-img"></div>
+        <div class="search flex"><input name="search" class="search-bar" placeholder="search">
+            <div onclick="renderGallery()" class="search-button flex">
+                <p>🔎</p>
+            </div>
+        </div>
+        <div class="gallery-button flex" onclick="renderGallery(true)">
+            <p>gallery</p>
+        </div>
+    </header>
+
+    <div class="modal-blur"></div>
+
+    <section class="modal-container">
+        <div class="canvas-container">
+            <canvas class="canvas" width="500" height="500"></canvas>
+            
+        </div>
+        <div>
+            <div class="edit-container">
+                <div class="line"><input name="addLine" class="line-bar"></div>
+                <div><select name="fonts" value="impact" onchange="setFont(this.value)" class="edit-button">
+                        <option value="impact">impact</option>
+                        <option value="arial">arial</option>
+                        <option value="david">david</option>
+                    </select>
+                </div>
+                <div><input type="range" class="abc" name="size" step="1" min="25" max="100" value="60"
+                        onchange="setSize(this.value);"></div>
+                <div><input type="color" name="color" onchange="setColor(this.value)" class="edit-button"></div>
+                <div><input type="color" name="borderColor" onchange="setBorderColor(this.value)" class="edit-button">
+                </div>
+                <div class="abc flex"><button onclick="onAddLine()" class="edit-button">➕</button></div>
+                <div><button onclick="onEditLine()" class="edit-button">✏</button></div>
+                <div><button onclick="onChangeLine()" class="edit-button">⇑⇓</button></div>
+                <div><button onclick="onDeleteLine()" class="edit-button">✂</button></div>
+                <div class="move-container">
+                    <button onclick="onMoveY(-15)" class="up flex">▲</button>
+                    <button onclick="onMoveY(15)" class="down flex">▼</button>
+                    <button onclick="onMoveX(-15)" class="left flex"> ◀ </button>
+                    <button onclick="onMoveX(15)" class="right flex"> ▶</button>
+                </div>
+                <div class="upload"><a href="#" onclick="downloadCanvas(this)" download="my-meme">Download</a>
+                    <input type="file" name="uploadfile" id="img" style="display:none;" onchange="onImgInput(event)" />
+                    <label for="img" class="change-img">upload</label>
+                </div>
+                <div class="flex">
+                    <button class="sticker" onclick="addSticker(1)">😂</button>
+                    <button class="sticker" onclick="addSticker(2)">😒</button>
+                    <button class="sticker" onclick="addSticker(3)">😭</button>
+                </div>
+                <div class="close-modal"><button onclick="toggleModal()" class="edit-button">close</button></div>
+            </div>
+    </section>
+
+    <div class="gallery-container">
+    </div>
+
+    <footer class="footer flex">
+        <p>© cofeerights-2022</p>
+
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/database.js"></script>
+    <script src="js/service.js"></script>
+    <script src="js/canvas.js"></script>
+</body>
+
+</html>

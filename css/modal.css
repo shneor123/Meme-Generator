@@ -1,0 +1,170 @@
+@import 'vars.css';
+
+.modal-container {
+    position: fixed;
+    top: 50%;
+    left: 55%;
+    transform: translate(-50%, -50%);
+    height: 600px;
+    width: fit-content;
+    margin: auto;
+    display: none;
+    grid-template-columns: 620px 400px;
+    z-index: 10;
+}
+
+.canvas-container {
+    background-color: var(--yellow);
+    grid-column: 1;
+    display: flex;
+    justify-content: center;
+    min-width: 620px;
+}
+
+
+
+.edit-container {
+    background-color: var(--black);
+    height: 600px;
+    width: 300px;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 60px 90px 90px 90px 90px 120px 60px;
+    justify-items: center;
+    align-items: center;
+}
+
+.line {
+    grid-column: 1/-1;
+}
+
+.line-bar {
+    background-color: var(--orange);
+    font-family: Impact, 'Arial Narrow Bold', sans-serif;
+    color: var(--black);
+    font-size: 150%;
+    width: 90%;
+    height: 70%;
+}
+
+.edit-button {
+    background-color: var(--orange);
+    font-family: Impact, 'Arial Narrow Bold', sans-serif;
+    font-size: xx-large;
+    font-weight: 800px;
+    height: 60px;
+    width: 120px;
+    color: var(--black);
+    cursor: pointer;
+}
+
+.move-container {
+    display: grid;
+    grid-template-columns: 25% 50% 25%;
+    grid-template-rows: 50% 50%;
+}
+
+.up {
+    grid-column: 2/3;
+    grid-row: 1;
+    font-family: Impact, 'Arial Narrow Bold', sans-serif;
+    font-size: xx-large;
+    font-weight: 800px;
+    height: 30px;
+    width: 60px;
+    cursor: pointer;
+    background-color: var(--orange);
+}
+
+.down {
+    grid-column: 2/3;
+    grid-row: 2;
+    font-family: Impact, 'Arial Narrow Bold', sans-serif;
+    font-size: xx-large;
+    font-weight: 800px;
+    height: 30px;
+    width: 60px;
+    cursor: pointer;
+    background-color: var(--orange);
+}
+
+.left {
+
+    grid-row: 1/-1;
+    font-family: Impact, 'Arial Narrow Bold', sans-serif;
+    font-size: xx-large;
+    font-weight: 800px;
+    height: 60px;
+    width: 30px;
+    cursor: pointer;
+    background-color: var(--orange);
+}
+
+.right {
+    grid-column: 3/-1;
+    grid-row: 1/-1;
+    font-family: Impact, 'Arial Narrow Bold', sans-serif;
+    font-size: xx-large;
+    font-weight: 800px;
+    height: 60px;
+    width: 30px;
+    cursor: pointer;
+    background-color: var(--orange);
+}
+
+.upload {
+    font-size: xx-large;
+    color: var(--orange);
+}
+
+a,
+a:visited,
+a:hover,
+a:active {
+    color: inherit;
+}
+
+.change-img {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.sticker {
+    background-color: var(--orange);
+    font-size: xx-large;
+    font-weight: 800px;
+    height: 60px;
+    width: 50px;
+    color: var(--black);
+    cursor: pointer;
+}
+
+.close-modal {
+    grid-column: 2/-1;
+}
+
+
+
+
+
+
+.modal-blur {
+    position: fixed;
+    height: 100vh;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgb(85, 80, 80);
+    opacity: 0.7;
+    z-index: 6;
+    display: none;
+
+}
+
+.view {
+    display: block;
+}
+
+.view-modal {
+    display: grid;
+}
